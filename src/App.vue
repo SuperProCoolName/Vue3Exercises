@@ -15,6 +15,7 @@ import TheWelcome from './components/TheWelcome.vue'
   <main>
     <TheWelcome />
   </main>
+  <h1>Tut chto-to napisano</h1>
 </template>
 
 <style scoped>
