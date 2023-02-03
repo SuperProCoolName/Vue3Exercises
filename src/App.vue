@@ -5,11 +5,14 @@ export default {
   },
   methods: {
     show: function() {
-      alert('03.02.2023');
+      const current = new Date();
+      const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
+      alert(date);
     }
   }
 }
 </script>
 <template>
-  {{ show() }}
+  <p>№1: <button @click="show">text</button></p>
+  <p>№1: <button @pointerenter="show">text</button></p>
 </template>
