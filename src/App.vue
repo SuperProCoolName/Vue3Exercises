@@ -5,7 +5,9 @@ export default {
   },
   methods: {
     show: function() {
-      alert('03.02.2023');
+      const current = new Date();
+      const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
+      alert(date);
     }
   }
 }
