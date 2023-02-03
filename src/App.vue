@@ -1,14 +1,13 @@
 <script>
 export default {
   data() {
-	return {
-    name: "zhandulbek",
-    surname: "euntrubedov",
-	}
-}
+    return {
+      text: 'Click me',
+      href: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', // видео 
+    }
+  }
 }
 </script>
 <template>
-  <div>{{ name }}</div>
-  <div>{{ surname }}</div>
+  <a :href=href>{{ text }}</a>
 </template>
