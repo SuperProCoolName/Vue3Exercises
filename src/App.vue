@@ -7,40 +7,23 @@ export default {
   },
   methods: {
 	show: function() {
-    const current = new Date(); 
-    const dayOfWeekNumber = current.getDay();
-    let dayOfWeek;
-    switch (dayOfWeekNumber) {
-      case 1:
-        dayOfWeek = "Monday";
-        break;
-      case 2:
-        dayOfWeek = "Tuesday";
-        break;
-      case 3:
-        dayOfWeek = "Wednesday";
-        break;
-      case 4:
-        dayOfWeek = "Thursday";
-        break;
-      case 5:
-        dayOfWeek = "Friday";
-        break;
-      case 6:
-        dayOfWeek = "Saturday";
-        break;
-      case 7:
-        dayOfWeek = "Sunday";
-        break; 
-      default:
-        dayOfWeek = "Something went wrong"
-        break;
-    }
-		alert(`Day of week by number = ${dayOfWeekNumber}. Day of week = ${dayOfWeek}`);
-	}
+    const number = this.$refs.inputField.value;
+		alert(`${number * number}`);
+	},
+  power_two: function() {
+    alert(`${2 * 2}`);
+  },
+  power_three: function() {
+    alert(`${3 * 3}`);  
+  }
 }
 }
 </script>
 <template>
-  {{ show() }}
+  <h3>Enter number:</h3>
+  <input type="number" ref="inputField"><br>
+  <button @click="show()">Try it</button>
+
+  <button @click="power_two()">Two to the power of 2</button><br>
+  <button @click="power_three()">Three to the power of 2</button>
 </template>
