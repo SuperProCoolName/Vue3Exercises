@@ -2,22 +2,22 @@
 export default {
   data() {
     return {
-      text: 'type',
-      data: 'if you see this then something went wrong',
+      cost: 50,
+      amount: 3,
+      price: 'Press to compute the price',
     }
   },
   methods: {
-    changeToType: function() {
-      this.text = 'type';
-    },
-    changeToWrite: function() {
-      this.text = 'write';
+    computePrice: function() {
+      this.price = (this.cost * this.amount);
     }
   }
 }
 </script>
 <template>
-  <h1>This text is written using something i don't know what to {{ text }} here</h1><br>
-  <button @click="changeToWrite">Change to "write"</button><br>
-  <button @click="changeToType">Change to "type"</button> 
+  <h3>Enter number for cost:</h3>
+  <input type="number" v-model.number="cost" ref="costField">
+  <h3>Enter number for amount:</h3>
+  <input type="number" v-model.number="amount" ref="amountField">
+  <button @click="computePrice">{{ price }}</button>
 </template>
