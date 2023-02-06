@@ -1,15 +1,16 @@
 <script>
 export default {
   data() {
-
+    return {
+      num1: 1,
+      num2: 2,
+    }
   },
   methods: {
-    show: function() {
-      const current = new Date();
-      const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
-      alert(date);
-    }
-  }
+	show: function() {
+		alert(`this.num1 + this.num2 = ${this.num1 + this.num2}`);
+	}
+}
 }
 </script>
 <template>
