@@ -11,6 +11,9 @@ export default {
     const dayOfWeekNumber = current.getDay();
     let dayOfWeek;
     switch (dayOfWeekNumber) {
+      case 0:
+        dayOfWeek = "Sunday";
+        break; 
       case 1:
         dayOfWeek = "Monday";
         break;
@@ -29,9 +32,6 @@ export default {
       case 6:
         dayOfWeek = "Saturday";
         break;
-      case 7:
-        dayOfWeek = "Sunday";
-        break; 
       default:
         dayOfWeek = "Something went wrong"
         break;
