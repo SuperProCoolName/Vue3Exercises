@@ -21,11 +21,11 @@ export default {
 }
 </script>
 <template>
-  <button @click="toggle_p1">toggle</button><br>
+  <button @click="toggle_p1">{{ visibility_p1 ? 'hide' : 'show' }}</button><br>
   <p v-if="visibility_p1">text p1</p>
-  <button @click="toggle_p2">toggle</button><br>
+  <button @click="toggle_p2">{{ visibility_p2 ? 'hide' : 'show' }}</button><br>
   <p v-if="visibility_p2">text p2</p>
-  <button @click="toggle_p3">toggle</button><br>
+  <button @click="toggle_p3">{{ visibility_p3 ? 'hide' : 'show' }}</button><br>
   <p v-if="visibility_p3">text p3</p>
   
 </template>
