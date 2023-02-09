@@ -2,18 +2,23 @@
 export default {
   data() {
     return {
-      isAdmin: true,
+      day: "if you see this then something went wrong",
     }
   },
   methods: {
-    toggle: function() {
-      this.isAdmin = !this.isAdmin;
-    }
-  }
+    dayOfTheWeek: function() {
+    this.day = new Date().getDay();
+  },
+}
 }
 </script>
 <template>
-  <button @click="toggle">{{ isAdmin ? "give admin" : "take admin" }}</button><br>
-  <p v-if="isAdmin">the user is admin</p>
-  <p v-else>the user is NOT admin</p>
+  <button @click="dayOfTheWeek">Click to reveal paragraph</button><br>
+  <p v-if="this.day === 1">Monday</p>
+  <p v-if="this.day === 2">Tuesday</p>
+  <p v-if="this.day === 3">Wednesday</p>
+  <p v-if="this.day === 4">Thursday</p>
+  <p v-if="this.day === 5">Friday</p>
+  <p v-if="this.day === 6">Saturday</p>
+  <p v-if="this.day === 0">Sunday</p>
 </template>
