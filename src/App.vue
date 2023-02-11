@@ -32,9 +32,16 @@ export default {
   <button @click.once="delFirst">Задание 2</button>
   <button @click.once="delLast">Задание 3</button>
   <button @click.once="delSecondToLast">Задание 4</button>
-  <button @click.once="sortArr">Задание 5</button>
-  <button @click.once="reverseOrder">Задание 6</button>
-  <ul v-for="elem in arr">
-    <li>{{ elem }}</li>
-  </ul><br>
+  <button @click="sortArr">Задание 5</button>
+  <button @click="reverseOrder">Задание 6</button>
+  <div class="red-box">
+    <ul v-for="elem in arr">
+      <li>{{ elem }}</li>
+    </ul><br>
+  </div>
 </template>
+<style>
+.red-box {
+  border: 5px solid red;
+}
+</style>
