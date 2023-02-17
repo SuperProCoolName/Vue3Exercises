@@ -2,12 +2,24 @@
 export default {
   data() {
     return {
-      cssClasses: "border: 5px solid red",
+      obj: {
+        done: true,
+        selected: false,
+      },
     };
   },
   methods: {},
 };
 </script>
 <template>
-  <p :style="cssClasses">text</p>
+  <p :class="obj">text</p>
 </template>
+<style>
+.done {
+  border: 5px solid red;
+}
+.selected {
+  color: green;
+  font-size: 10em;
+}
+</style>
