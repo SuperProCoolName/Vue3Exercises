@@ -1,17 +1,22 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      task: "Задание",
+      task_number: 1,
+    };
   },
   methods: {},
 };
 </script>
 <template>
-  <p :style="{ color: 'green', background: 'yellow', fontSize: '30px' }">
-    Задание 1
-  </p>
-  &nbsp; &nbsp; &nbsp;
-  <p :style="{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '30px' }">
-    Задание 2
-  </p>
+  <input type="text" v-model="task" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <p>{{ task }}</p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <p>{{ task.toUpperCase() }}</p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="number" v-model="task_number" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <p>{{ task_number ** 2 }}</p>
 </template>
