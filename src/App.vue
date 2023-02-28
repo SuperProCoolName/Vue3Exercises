@@ -2,20 +2,52 @@
 export default {
   data() {
     return {
-      items: ["a", "b", "c", "d", "e"],
+      users: [
+        {
+          id: 1,
+          name: "name1",
+          salary: 100,
+          age: 30,
+        },
+        {
+          id: 2,
+          name: "name2",
+          salary: 200,
+          age: 40,
+        },
+        {
+          id: 3,
+          name: "name3",
+          salary: 300,
+          age: 50,
+        },
+      ],
     };
   },
   methods: {
-    removeItem: function (index) {
-      this.items.splice(index, 1);
+    removeItem: function (id) {
+      this.users = this.users.filter((user) => {
+        return user.id !== id;
+      });
     },
   },
 };
 </script>
 <template>
-  <ul>
-    <li v-for="(item, index) in items" :key="index">
-      <button @click="removeItem(index)">{{ item }}</button>
-    </li>
-  </ul>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Salary</th>
+      <th>Age</th>
+      <th>Remove</th>
+    </tr>
+    <tr v-for="user in users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.salary }}</td>
+      <td>{{ user.age }}</td>
+      <td><button @click="removeItem(user.id)">remove</button></td>
+    </tr>
+  </table>
 </template>
