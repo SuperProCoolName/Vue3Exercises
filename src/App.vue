@@ -4,8 +4,15 @@ export default {
   components: {
     Employee,
   },
+  data() {
+    return {
+      name: "John",
+      salary: "$300",
+      age: "28",
+    };
+  },
 };
 </script>
 <template>
-  <Employee :arg="{ name: 'John', surname: 'Smith', age: 28 }" />
+  <Employee :name="name" :salary="salary" :age="age" />
 </template>
