@@ -7,8 +7,8 @@ export default {
   data() {
     return {
       name: "John",
-      salary: "$300",
-      age: "28",
+      salary: 300,
+      age: 28,
     };
   },
 };
