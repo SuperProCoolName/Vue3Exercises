@@ -5,6 +5,16 @@ export default {
     Employee,
   },
   data() {},
+  methods: {
+    alo: function () {
+      alert("xxx");
+    },
+    cons: function () {
+      console.log("xxx");
+    },
+  },
 };
 </script>
-<template></template>
+<template>
+  <Employee @show="alo" @write="cons" />
+</template>
