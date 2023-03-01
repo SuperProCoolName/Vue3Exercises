@@ -4,17 +4,22 @@ export default {
   components: {
     Employee,
   },
-  data() {},
+  data() {
+    return {
+      name: "John",
+    };
+  },
   methods: {
-    alo: function () {
-      alert("xxx");
+    cons_name: function (name) {
+      console.log(name);
     },
-    cons: function () {
-      console.log("xxx");
+    cons_sal: function (name, salary) {
+      console.log(name, salary);
     },
   },
 };
 </script>
 <template>
-  <Employee @show="alo" @write="cons" />
+  <input type="text" v-model="name" />
+  <Employee @write="cons_name" @show="cons_sal" />
 </template>
