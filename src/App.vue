@@ -20,6 +20,5 @@ export default {
 };
 </script>
 <template>
-  <input type="text" v-model="name" />
   <Employee @write="cons_name" @show="cons_sal" />
 </template>
